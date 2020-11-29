@@ -2,10 +2,11 @@ import React, { Component, useState, useEffect } from "react";
 import '../styles/App.css';
 
 const App = () => {
-  // write your code here 
+  // write your code here
+  const EnterKeyCode=13;
   const [time, setTime] = React.useState("");
   const handleEnter = (event) => {
-    if(event.keyCode === 13) {
+    if(event.keyCode === EnterKeyCode) {
       clearInterval(timerID);
       if(isNaN(event.target.value)) {
         setTime(0);
